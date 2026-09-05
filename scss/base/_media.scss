@@ -1,0 +1,40 @@
+//Адаптив Меню
+
+
+@media (max-width: 1150px) {
+    .header {
+        margin-top: 0;
+        &__nav {
+            display: none;
+        }
+        &__basket {
+            display: none;
+        }
+        &__burger {
+            display: block;
+            
+        }
+    }
+}
+
+@media (min-width: 1150px) {
+    .header {
+        &__burger {
+            display: none;
+        }
+    }
+}
+@media (min-width: 1500px) {
+    .hero {
+        &__inner {
+            margin-right: 37px;
+        }
+    }
+}
+@media (min-width: 1900px) {
+    .hero {
+        &__inner {
+            margin-right: 235px;
+        }
+    }
+}

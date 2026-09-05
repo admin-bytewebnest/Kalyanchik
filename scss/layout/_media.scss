@@ -1,0 +1,374 @@
+//Categories
+
+@media (max-width: 640px) {
+  .hero {
+    align-items: start;
+    justify-content: center;
+
+    &__inner {
+      margin-top: 180px;
+      margin-right: 0;
+      text-align: center;
+    }
+    &__title {
+      line-height: 1.3;
+    }
+    &__subtitle {
+      margin: auto;
+      max-width: 415px;
+      margin-bottom: 270px;
+      line-height: 1.3;
+    }
+    &__link {
+      display: inline-block;
+      width: 80%;
+      margin: auto;
+    }
+  }
+  // До 640px применяется
+  .bestsellers,
+  .hookahs {
+    &__title {
+      text-align: center;
+    }
+  }
+  .bestsellers-slider,
+  .hookahs-slider {
+    position: relative;
+    width: 320px;
+    margin: auto;
+    overflow: visible;
+    
+    &__btn-prevent,
+    &__btn-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50px);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgb(30, 30, 30);
+      z-index: 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    &__viewport {
+      overflow: hidden;
+    }
+    
+    &__track {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      width: max-content;
+      transition: transform 0.7s ease-in-out;
+      will-change: transform;
+      overflow: hidden;
+    }
+    &__btn-prevent {
+      left: -60px;
+    }
+    &__btn-next {
+      right: -60px;
+    }
+    .categories__item {
+      flex: 0 0 320px;
+    }
+  }
+  [class$="__positions"],
+  [class*="__positions"].active {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+  [class$="__position"],
+  [class*="__position"].active{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: solid 1px white;
+  }
+  [class*="__position"].active {
+    background-color: red;
+  }
+  .categories-slider {
+    position: relative;
+    width: 320px;
+    margin: auto;
+    overflow: visible;
+
+    &__btn-prevent,
+    &__btn-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50px);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgb(30, 30, 30);
+      z-index: 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    &__viewport {
+      overflow: hidden;
+    }
+    &__track {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      width: max-content;
+      transition: transform 0.7s ease-in-out;
+      will-change: transform;
+      overflow: hidden;
+    }
+    &__btn-prevent {
+      left: -60px;
+    }
+    &__btn-next {
+      right: -60px;
+    }
+  }
+
+  .bestsellers-cards__title,
+  .bestsellers-cards__price,
+  .hookahs-cards__title,
+  .hookahs-cards__price {
+    text-align: center;
+  }
+  .hookahs__price {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 120%;
+    color: rgba(255, 254, 254, 1);
+    text-align: center;
+    margin-top: 20px;
+
+  }
+  .bestsellers-cards.bestsellers-cards--desktop,
+  .hookahs-cards.hookahs-cards--desktop {
+    display: none;
+  }
+  .bestsellers-cards.bestsellers-cards--tablet,
+  .hookahs-cards.hookahs-cards--tablet {
+    grid-template-columns: 320px;
+    justify-content: center;
+    flex: 0 0 320px;
+    width: 320px;
+    &__title,
+    &__price {
+      text-align: center;
+    }
+  }
+
+  .about {
+    &__inner {
+      flex-direction: column;
+      align-items: center;
+      justify-content: left;
+    }
+    &__item {
+      margin: 0;
+      width: 100%;
+      margin-bottom: 40px;
+
+      .about__title {
+        font-size: 17px;
+        text-transform: none;
+      }
+      .about__subtitle {
+        font-size: 16px;
+        text-align: center;
+      }
+    }
+    &__item:nth-child(1) {
+      max-width: 280px;
+      margin-right: 0px;
+    }
+    &__item:nth-child(2) {
+      max-width: 280px;
+      margin-right: 0px;
+    }
+    &__item:nth-child(3) {
+      max-width: 280px;
+      margin-right: 0px;
+    }
+    &__item:nth-child(4) {
+      max-width: 280px;
+    }
+    &__title {
+      text-align: center;
+      font-size: 41px;
+    }
+
+    &__title span {
+      display: none;
+    }
+  }
+
+  .categories {
+    display: block;
+    &__inner {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      align-items: center;
+    }
+    &__item {
+      width: 320px;
+      height: 320px;
+    }
+    &__img {
+      width: 95%;
+      height: 95%;
+    }
+    &__title > h4 {
+      margin-top: 30px;
+    }
+    &__title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    &--desktop {
+      display: none;
+    }
+    &--tablet {
+      display: block;
+    }
+  }
+
+  .blog {
+    &__inner {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+    &__title,
+    &__subtitle {
+      text-align: center;
+    }
+    &__title {
+      margin-bottom: 30px;
+    }
+    &--desktop {
+      display: none;
+    }
+    &--tablet {
+      display: block;
+    }
+  }
+  .blog-slider {
+    position: relative;
+    width: 320px;
+    margin: auto;
+    overflow: visible;
+
+    &__btn-prevent,
+    &__btn-next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50px);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: rgb(30, 30, 30);
+      z-index: 3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    &__viewport {
+      overflow: hidden;
+    }
+    &__track {
+      display: flex;
+      align-items: flex-start;
+      gap: 30px;
+      width: max-content;
+      transition: transform 0.7s ease-in-out;
+      will-change: transform;
+      overflow: hidden;
+    }
+    &__btn-prevent {
+      left: -60px;
+    }
+    &__btn-next {
+      right: -60px;
+    }
+    .blog__item {
+      flex: 0 0 320px;
+    }
+  }
+  .footer-nav {
+    grid-template-columns: repeat(2, 270px);
+    justify-content: space-between;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "item-menu  item-contacts "
+      "item-menu item-address";
+    column-gap: 115px;
+    overflow: hidden;
+
+    &__title,
+    &__subtitle {
+      font-size: 16px;
+    }
+    &__item-address {
+      .footer-nav__title {
+        margin-bottom: 0;
+      }
+    }
+    &__item-social {
+      display: none;
+    }
+  }
+  .bestsellers,
+  .about,
+  .categories,
+  .blog,
+  .hookahs {
+    margin-bottom: 100px;
+  }
+
+  // &__item-contacts,
+  // &__item-address {
+  //   // position: relative;
+
+  // }
+}
+@media (min-width: 641px) {
+  .bestsellers-cards.bestsellers-cards--tablet,
+  .hookahs-cards.hookahs-cards--tablet {
+    display: none;
+  }
+  .header__burger {
+    display: none;
+  }
+}
+@media (min-width: 1100px) {
+  //От 640px применяется
+  .categories {
+    &__item:hover {
+      height: 100%;
+    }
+
+    &__item:hover &__img {
+      width: 450px;
+      height: 450px;
+    }
+  }
+  .bestsellers-slider,
+  .hookahs-slider {
+    display: none;
+  }
+}
+@media (min-width: 1450px) {
+  .hero {
+    background-position: center;
+  }
+}

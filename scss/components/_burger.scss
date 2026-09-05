@@ -1,0 +1,77 @@
+.header {
+    &__burger {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 40px;
+        height: 30px;
+        padding: 0;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+
+        span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: #fff;
+            border-radius: 3px;
+            transform-origin: center;
+            transition:
+                top 0.3s ease,
+                transform 0.3s ease,
+                opacity 0.2s ease;
+        }
+
+        // Начальное положение трёх линий
+        span:nth-child(1) {
+            top: 0;
+        }
+
+        span:nth-child(2) {
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        span:nth-child(3) {
+            bottom: 0;
+        }
+        // 1. Все линии сходятся в центр
+        &.merge {
+
+            span:nth-child(1) {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            span:nth-child(3) {
+                bottom: auto;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        // 2. Превращается в крестик
+        &.cross {
+            // Центральная линия исчезает
+            span:nth-child(2) {
+                opacity: 0;
+            }
+
+            // Верхняя линия становится
+            span:nth-child(1) {
+                top: 50%;
+                transform: translateY(-50%) rotate(45deg);
+            }
+
+            // Нижняя линия становится
+            span:nth-child(3) {
+                top: 50%;
+                bottom: auto;
+                transform: translateY(-50%) rotate(-45deg);
+            }
+        }
+    }
+}

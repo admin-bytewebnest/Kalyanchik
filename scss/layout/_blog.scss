@@ -1,0 +1,70 @@
+@use '../abstracts/' as *;
+.blog {
+    margin-bottom: 97px;
+
+    > h2 {
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 120%;
+        text-transform: uppercase;
+    }
+    &__inner {
+        @include grid(4, 1fr);
+        grid-template-rows: repeat(4, auto);
+        margin-top: 30px;
+    }
+    &__item {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 420px 60px auto;
+        width: 320px;
+        height: max-content;
+       
+    }
+    &__item > div:first-of-type{ 
+         overflow: hidden;
+         border-radius: 20px;
+    }
+    &__img {
+        width: 320px;
+        height: 420px;
+        object-fit: cover;
+        border-radius: 20px;
+        transform: scale(1.1);
+    }
+    
+    &__title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 120%;
+        
+    }
+    &__subtitle {
+        font-size: 18px;
+        line-height: 130%;
+    }
+    &__title,
+    &__subtitle {
+        text-align: left;
+    }
+    &--desktop {
+        display: block;
+    }
+    &--tablet {
+        display: none;
+    }
+}
+
+.blog-item {
+
+
+    &__item:not(:first-child) {
+        min-height: 40px;
+    }
+    &__item:nth-child(2) {
+        margin: 20px 0 10px 0;
+    }
+    &__item:last-child {
+        margin-top: 20px;
+    }
+}

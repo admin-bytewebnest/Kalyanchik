@@ -1,0 +1,30 @@
+@use '../abstracts/' as *;
+.bestsellers-cards,
+.hookahs-cards {
+    display: grid;
+    @include grid(4, 320px, 20px);
+    // justify-content: center;
+    &__item {
+        display: grid;
+        grid-template-rows: 420px auto;
+        
+    }
+    &__card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(30, 30, 30, 1);
+        margin-bottom: 20px;
+        border-radius: 20px;
+    }
+    &__title {
+        margin-bottom: 10px;
+    }
+    &__title,
+    &__price {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 120%;
+        color: rgba(255, 254, 254, 1);
+    }
+}

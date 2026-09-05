@@ -1,0 +1,15 @@
+//Абстракции 
+@forward 'abstracts';
+//Сторонние библиотеки
+@forward 'vendors'; 
+// База
+@forward 'base';
+
+//Компоненты
+@forward 'components';
+
+//Сетка и лэйаут
+@forward 'layout';
+
+//Страницы
+@forward 'pages'; 

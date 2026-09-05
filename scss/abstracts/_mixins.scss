@@ -1,0 +1,26 @@
+// Файл миксинов
+// Миксин - Имя - Параметры (Переменные) - Вызов - Параметры
+
+// @mixin block(
+//     $width,
+//     $height:$width,
+//     $background-color:transparent
+//     ){
+//     display: block;
+//     width: $width;
+//     height: $height;
+//     background-color: $background-color;
+// }
+
+@mixin grid(
+    $grid-template-columns,
+    $grid-template-columns-width,
+    $gap:0
+    ){
+    display: grid; //Значение изначальное и не меняем
+    grid-template-columns: repeat(
+        $grid-template-columns, 
+        $grid-template-columns-width
+        );
+    gap: $gap;
+}

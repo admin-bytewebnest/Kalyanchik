@@ -1,0 +1,9 @@
+@use '../abstracts/' as *;
+
+.block {
+    //Вызов Mixin
+    // @include block(400px, 400px, white);
+}
+.block-2 {
+    // @include block(300px, 300px, white); //Принимает Аргументы
+}

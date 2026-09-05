@@ -1,0 +1,13 @@
+{
+  "name": "test-repo-2",
+  "private": true,
+  "scripts": {
+    "sass": "npx sass scss:css --watch",
+    "serve": "npx live-server",
+    "dev": "npx npm-run-all --parallel sass serve"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.0",
+    "sass": "^1.70.0"
+  }
+}

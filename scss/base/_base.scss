@@ -1,0 +1,17 @@
+// Файл глобальных стилей
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #131313;
+    color: white;
+}
+
+a {
+    color: inherit; //Наследовать цвет родителя
+    text-decoration: none;
+}
+.container {
+    max-width: 1385px; //Ширина контейнера
+    //height: 100%;
+    margin: 0 auto; //Внешний отступ
+    padding: 0 20px;
+}

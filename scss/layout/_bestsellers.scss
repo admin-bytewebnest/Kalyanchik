@@ -1,0 +1,17 @@
+.bestsellers{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto);
+    row-gap: 30px;
+    margin-top: 86px;
+    margin-bottom: 120px;
+    overflow: hidden;
+
+    &__title {
+        color: #FFFEFE;
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 120%;
+        text-transform: uppercase;
+    }
+}

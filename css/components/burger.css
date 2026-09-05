@@ -1,0 +1,17 @@
+/* Error: Silent comments aren't allowed in plain CSS.
+ *    ,
+ * 35 |   //съезжаются в центр
+ *    |   ^^^^^^^^^^^^^^^^^^^^^
+ *    '
+ *   scss/components/burger.css 35:3  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Silent comments aren't allowed in plain CSS.\a    \2577 \a 35 \2502    //\441 \44a \435 \437 \436 \430 \44e \442 \441 \44f  \432  \446 \435 \43d \442 \440 \d\a    \2502    ^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   scss/components/burger.css 35:3  root stylesheet";
+}
